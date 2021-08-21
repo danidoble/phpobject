@@ -12,8 +12,8 @@ use Danidoble\Interfaces\IDanidoble;
  */
 class Danidoble implements IDanidoble
 {
-    private string $_danidoble = 'danidoble';
-    private $message,$no,$type,$action;
+    protected string $_danidoble = 'danidoble';
+    protected $message,$no,$type,$action;
 
     /**
      * @return string
