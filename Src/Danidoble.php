@@ -12,7 +12,7 @@ use Danidoble\Interfaces\IDanidoble;
  */
 class Danidoble implements IDanidoble
 {
-    private $_danidoble = 'danidoble';
+    private string $_danidoble = 'danidoble';
     private $message,$no,$type,$action;
 
     /**
