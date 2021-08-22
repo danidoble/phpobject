@@ -5,8 +5,32 @@
 
 include __DIR__.'/../vendor/autoload.php';
 
-$danidoble = new \Danidoble\Danidoble();
-$danidoble->hi = 'hi';
-echo $danidoble->hi."\n";
+use Danidoble\Danidoble;
+use Symfony\Component\ErrorHandler\Debug;
+use Symfony\Component\ErrorHandler\ErrorHandler;
+use Symfony\Component\ErrorHandler\DebugClassLoader;
 
+//for development
+Debug::enable();
+
+//for production
+//ErrorHandler::register();
+//DebugClassLoader::enable();
+
+// If you want a custom generic template when debug is not enabled
+// HtmlErrorRenderer::setTemplate('/path/to/custom/error.html.php');
+
+$danidoble = new Danidoble();
+$danidoble->message = 'Hello, this should be protected even though it was removed';
+
+//this makes an error
+//echo $danidoble->_danidoble;
+
+//this dont makes an error
+//echo '<pre>';
+//var_dump(($danidoble->getCredits()));
+//echo '</pre><br>';
+
+echo '<pre>';
 var_dump($danidoble);
+echo '</pre><br>';
