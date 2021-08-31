@@ -88,8 +88,10 @@ interface IDanidoble
      * @param null $message
      * @param null $type
      * @param null $action
+     * @param null $error
+     * @param null $errors
      */
-    public function __construct($no = null, $message = null, $type = null, $action = null);
+    public function __construct($no = null, $message = null, $type = null, $action = null, $error = null, $errors = null);
 
     /**
      * @return false|string
