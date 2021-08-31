@@ -62,6 +62,28 @@ interface IDanidoble
     public function SetType($value): Danidoble;
 
     /**
+     * @return mixed
+     */
+    public function getError();
+
+    /**
+     * @param $value
+     * @return Danidoble
+     */
+    public function SetError($value): Danidoble;
+
+    /**
+     * @return mixed
+     */
+    public function getErrors();
+
+    /**
+     * @param $value
+     * @return Danidoble
+     */
+    public function SetErrors($value): Danidoble;
+
+    /**
      * @param null $no
      * @param null $message
      * @param null $type

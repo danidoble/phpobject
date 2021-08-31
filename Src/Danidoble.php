@@ -15,7 +15,7 @@ use ErrorException;
  */
 class Danidoble implements IDanidoble
 {
-    public $message, $no, $type, $action;
+    public $message, $no, $type, $action, $error, $errors;
     protected array $_danidoble;
 
     /**
@@ -24,14 +24,14 @@ class Danidoble implements IDanidoble
      * @param null $type
      * @param null $action
      */
-    public function __construct($no = null, $message = null, $type = null, $action = null)
+    public function __construct($no = null, $message = null, $type = null, $action = null, $error = null, $errors = null)
     {
         $this->_danidoble = [
-            'credits'=>'Created by danidoble.',
-            'github'=>'https://github.com/danidoble',
-            'website'=>'https://danidoble.com',
+            'credits' => 'Created by danidoble.',
+            'github' => 'https://github.com/danidoble',
+            'website' => 'https://danidoble.com',
         ];
-        $this->bind($no, $message, $type, $action);
+        $this->bind($no, $message, $type, $action, $error, $errors);
     }
 
     /**
@@ -40,27 +40,39 @@ class Danidoble implements IDanidoble
      * @param null $type
      * @param null $action
      */
-    public function bind($no = null, $message = null, $type = null, $action = null): void{
+    public function bind($no = null, $message = null, $type = null, $action = null, $error = null, $errors = null): void
+    {
         if ($no !== null) {
             $this->no = $no;
-        }else{
+        } else {
             unset($this->no);
         }
         if ($message !== null) {
             $this->message = $message;
-        }else{
+        } else {
             unset($this->message);
         }
         if ($type !== null) {
             $this->type = $type;
-        }else{
+        } else {
             unset($this->type);
         }
         if ($action !== null) {
             $this->action = $action;
-        }else{
+        } else {
             unset($this->action);
         }
+        if ($error !== null) {
+            $this->error = $error;
+        } else {
+            unset($this->error);
+        }
+        if ($errors !== null) {
+            $this->errors = $errors;
+        } else {
+            unset($this->errors);
+        }
+
     }
 
     /**
@@ -69,18 +81,25 @@ class Danidoble implements IDanidoble
     public function __toString()
     {
         $data = json_decode(json_encode($this));
-        if(isset($this->message)){
+        if (isset($this->message)) {
             $data->message = $this->message;
         }
-        if(isset($this->no)) {
+        if (isset($this->no)) {
             $data->no = $this->no;
         }
-        if(isset($this->type)) {
+        if (isset($this->type)) {
             $data->type = $this->type;
         }
-        if(isset($this->action)) {
+        if (isset($this->action)) {
             $data->action = $this->action;
         }
+        if (isset($this->error)) {
+            $data->error = $this->error;
+        }
+        if (isset($this->errors)) {
+            $data->errors = $this->errors;
+        }
+
         return json_encode($data);
     }
 
@@ -127,7 +146,7 @@ class Danidoble implements IDanidoble
      */
     public function __isset(string $name): bool
     {
-        if(isset($this->name)){
+        if (isset($this->name)) {
             return true;
         }
         return false;
@@ -223,4 +242,41 @@ class Danidoble implements IDanidoble
         $this->type = $value;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getError()
+    {
+        return $this->error;
+    }
+
+    /**
+     * @param $value
+     * @return Danidoble
+     */
+    public function SetError($value): Danidoble
+    {
+        $this->error = $value;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getErrors()
+    {
+        return $this->errors;
+    }
+
+    /**
+     * @param $value
+     * @return Danidoble
+     */
+    public function SetErrors($value): Danidoble
+    {
+        $this->errors = $value;
+        return $this;
+    }
+
 }
