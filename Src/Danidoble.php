@@ -15,7 +15,7 @@ use ErrorException;
  */
 class Danidoble implements IDanidoble
 {
-    protected $message, $no, $type, $action;
+    public $message, $no, $type, $action;
     protected array $_danidoble;
 
     /**
