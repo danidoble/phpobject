@@ -5,10 +5,11 @@
 
 namespace Danidoble\Interfaces;
 
-use Danidoble\Danidoble;
+use Danidoble\Build;
 
 /**
- *
+ * @Interface IDanidoble
+ * @author danidoble <Daniel Sandoval>
  */
 interface IDanidoble
 {
@@ -24,9 +25,9 @@ interface IDanidoble
 
     /**
      * @param $value
-     * @return Danidoble
+     * @return Build
      */
-    public function SetMessage($value): Danidoble;
+    public function SetMessage($value): Build;
 
     /**
      * @return mixed
@@ -35,9 +36,9 @@ interface IDanidoble
 
     /**
      * @param $value
-     * @return Danidoble
+     * @return Build
      */
-    public function SetAction($value): Danidoble;
+    public function SetAction($value): Build;
 
     /**
      * @return mixed
@@ -46,9 +47,9 @@ interface IDanidoble
 
     /**
      * @param $value
-     * @return Danidoble
+     * @return Build
      */
-    public function SetNo($value): Danidoble;
+    public function SetNo($value): Build;
 
     /**
      * @return mixed
@@ -57,9 +58,9 @@ interface IDanidoble
 
     /**
      * @param $value
-     * @return Danidoble
+     * @return Build
      */
-    public function SetType($value): Danidoble;
+    public function SetType($value): Build;
 
     /**
      * @return mixed
@@ -68,9 +69,9 @@ interface IDanidoble
 
     /**
      * @param $value
-     * @return Danidoble
+     * @return Build
      */
-    public function SetError($value): Danidoble;
+    public function SetError($value): Build;
 
     /**
      * @return mixed
@@ -79,9 +80,9 @@ interface IDanidoble
 
     /**
      * @param $value
-     * @return Danidoble
+     * @return Build
      */
-    public function SetErrors($value): Danidoble;
+    public function SetErrors($value): Build;
 
     /**
      * @param null $no
@@ -99,9 +100,9 @@ interface IDanidoble
     public function __toString();
 
     /**
-     * @return $this
+     * @return Build
      */
-    public function __invoke(): Danidoble;
+    public function __invoke(): Build;
 
     /**
      * @param string $name

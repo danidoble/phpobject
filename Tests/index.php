@@ -21,8 +21,10 @@ Debug::enable();
 // HtmlErrorRenderer::setTemplate('/path/to/custom/error.html.php');
 
 $danidoble = new Danidoble();
-$danidoble->message = 'Hello, this should be protected even though it was removed';
+$danidoble->message = 'Hello';
 
+$build = new \Danidoble\Build();
+$build->message = 'Hello from build';
 //this makes an error
 //echo $danidoble->_danidoble;
 
