@@ -18,7 +18,7 @@ use ErrorException;
 class Build implements IDanidoble
 {
     public $message, $no, $type, $action, $error, $errors;
-    protected array $_danidoble;
+    protected $_danidoble;
 
     /**
      * @param null $no
