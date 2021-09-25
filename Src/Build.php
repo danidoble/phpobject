@@ -34,6 +34,7 @@ class Build implements IDanidoble
             'credits' => 'Created by danidoble.',
             'github' => 'https://github.com/danidoble',
             'website' => 'https://danidoble.com',
+            'easter_egg' => 'Congratulations',
         ];
         $this->bind($no, $message, $type, $action, $error, $errors);
     }
@@ -150,7 +151,7 @@ class Build implements IDanidoble
      */
     public function __isset(string $name): bool
     {
-        if (isset($this->name)) {
+        if (isset($this->$name)) {
             return true;
         }
         return false;
