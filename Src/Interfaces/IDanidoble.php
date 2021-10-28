@@ -134,4 +134,19 @@ interface IDanidoble
      * @param null $action
      */
     public function bind($no = null, $message = null, $type = null, $action = null): void;
+
+    /**
+     * @return array
+     */
+    public function toArray(): array;
+
+    /**
+     * @return false|string
+     */
+    public function toJSON();
+
+    /**
+     * @return int
+     */
+    public function count(): int;
 }

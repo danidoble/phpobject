@@ -284,4 +284,28 @@ class Build implements IDanidoble
         return $this;
     }
 
+    /**
+     * @return array
+     */
+    public function toArray(): array
+    {
+        return json_decode($this->toJSON(), true);
+    }
+
+    /**
+     * @return false|string
+     */
+    public function toJSON()
+    {
+        return json_encode($this);
+    }
+
+    /**
+     * @return int
+     */
+    public function count(): int
+    {
+        return count($this->toArray());
+    }
+
 }
