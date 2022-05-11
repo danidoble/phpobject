@@ -4,8 +4,6 @@
   "type": "plugin",
   "homepage": "https://github.com/danidoble/phpobject",
   "license": "MIT",
-  "suggest": {
-  },
   "keywords": [
     "danidoble",
     "object"
@@ -19,8 +17,10 @@
   "minimum-stability": "stable",
   "require": {
     "php": "^7.3|^8.0",
-    "ext-json": "*",
-    "symfony/error-handler": "^5.3"
+    "ext-json": "*"
+  },
+  "suggest": {
+    "symfony/error-handler": "^5.4"
   },
   "autoload": {
     "files": [],
@@ -31,5 +31,5 @@
       "/Tests/"
     ]
   },
-  "version": "v0.0.6"
+  "version": "v0.0.7"
 }
