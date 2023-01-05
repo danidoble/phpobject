@@ -19,9 +19,9 @@ interface IDanidoble
     public function getCredits(): array;
 
     /**
-     * @return mixed
+     * @return ?string
      */
-    public function getMessage();
+    public function getMessage(): ?string;
 
     /**
      * @param $value
@@ -30,9 +30,9 @@ interface IDanidoble
     public function SetMessage($value): Build;
 
     /**
-     * @return mixed
+     * @return ?string
      */
-    public function getAction();
+    public function getAction(): ?string;
 
     /**
      * @param $value
@@ -41,9 +41,9 @@ interface IDanidoble
     public function SetAction($value): Build;
 
     /**
-     * @return mixed
+     * @return ?string
      */
-    public function getNo();
+    public function getNo(): ?string;
 
     /**
      * @param $value
@@ -52,9 +52,9 @@ interface IDanidoble
     public function SetNo($value): Build;
 
     /**
-     * @return mixed
+     * @return ?string
      */
-    public function getType();
+    public function getType(): ?string;
 
     /**
      * @param $value
@@ -63,9 +63,9 @@ interface IDanidoble
     public function SetType($value): Build;
 
     /**
-     * @return mixed
+     * @return ?bool
      */
-    public function getError();
+    public function getError(): ?bool;
 
     /**
      * @param $value
@@ -74,9 +74,9 @@ interface IDanidoble
     public function SetError($value): Build;
 
     /**
-     * @return mixed
+     * @return ?array
      */
-    public function getErrors();
+    public function getErrors(): ?array;
 
     /**
      * @param $value
@@ -141,9 +141,9 @@ interface IDanidoble
     public function toArray(): array;
 
     /**
-     * @return false|string
+     * @return bool|string
      */
-    public function toJSON();
+    public function toJSON(): bool|string;
 
     /**
      * @return int

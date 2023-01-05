@@ -16,11 +16,11 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": "^7.3|^8.0",
+    "php": "^8.0",
     "ext-json": "*"
   },
   "suggest": {
-    "symfony/error-handler": "^5.4"
+    "symfony/error-handler": "^v6.2.3"
   },
   "autoload": {
     "files": [],
@@ -31,5 +31,5 @@
       "/Tests/"
     ]
   },
-  "version": "v0.0.7"
+  "version": "v0.1.0"
 }

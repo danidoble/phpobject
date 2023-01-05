@@ -17,8 +17,13 @@ use ErrorException;
  */
 class Build implements IDanidoble
 {
-    public $message, $no, $type, $action, $error, $errors;
-    protected $_danidoble;
+    public ?array $errors;
+    public ?bool $error;
+    public ?string $action;
+    public ?string $type;
+    public ?string $no;
+    public ?string $message;
+    protected array $_danidoble;
 
     /**
      * @param null $no
@@ -177,9 +182,9 @@ class Build implements IDanidoble
     }
 
     /**
-     * @return mixed
+     * @return ?string
      */
-    public function getMessage()
+    public function getMessage(): ?string
     {
         return $this->message;
     }
@@ -195,9 +200,9 @@ class Build implements IDanidoble
     }
 
     /**
-     * @return mixed
+     * @return ?string
      */
-    public function getAction()
+    public function getAction(): ?string
     {
         return $this->action;
     }
@@ -213,9 +218,9 @@ class Build implements IDanidoble
     }
 
     /**
-     * @return mixed
+     * @return ?string
      */
-    public function getNo()
+    public function getNo(): ?string
     {
         return $this->no;
     }
@@ -231,9 +236,9 @@ class Build implements IDanidoble
     }
 
     /**
-     * @return mixed
+     * @return ?string
      */
-    public function getType()
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -249,9 +254,9 @@ class Build implements IDanidoble
     }
 
     /**
-     * @return mixed
+     * @return ?bool
      */
-    public function getError()
+    public function getError(): ?bool
     {
         return $this->error;
     }
@@ -267,9 +272,9 @@ class Build implements IDanidoble
     }
 
     /**
-     * @return mixed
+     * @return ?array
      */
-    public function getErrors()
+    public function getErrors(): ?array
     {
         return $this->errors;
     }
@@ -295,7 +300,7 @@ class Build implements IDanidoble
     /**
      * @return false|string
      */
-    public function toJSON()
+    public function toJSON(): bool|string
     {
         return json_encode($this);
     }

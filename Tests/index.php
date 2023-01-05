@@ -3,7 +3,7 @@
  * Created by (c)danidoble 2021.
  */
 
-include __DIR__.'/../vendor/autoload.php';
+include __DIR__ . '/../vendor/autoload.php';
 
 use Danidoble\Danidoble;
 use Symfony\Component\ErrorHandler\Debug;
@@ -35,4 +35,12 @@ $build->message = 'Hello from build';
 
 echo '<pre>';
 var_dump($danidoble);
+echo '</pre><br>';
+
+$dobject = new \Danidoble\DObject(['opt' => true, 'req' => ['file' => '...', 'opt' => false]]);
+echo '<pre>';
+echo $dobject.'<br>';
+echo $dobject->toJSON(JSON_PRETTY_PRINT).'<br>';
+var_dump($dobject->toArray()).'<br>';
+var_dump($dobject);
 echo '</pre><br>';
