@@ -19,9 +19,9 @@ interface IDanidoble
     public function getCredits(): array;
 
     /**
-     * @return ?string
+     * @return string|null|array|object
      */
-    public function getMessage(): ?string;
+    public function getMessage(): string|null|array|object;
 
     /**
      * @param $value

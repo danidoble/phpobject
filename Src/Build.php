@@ -22,7 +22,7 @@ class Build implements IDanidoble
     public ?string $action;
     public ?string $type;
     public ?string $no;
-    public ?string $message;
+    public null|array|string $message;
     protected array $_danidoble;
 
     /**
@@ -182,9 +182,9 @@ class Build implements IDanidoble
     }
 
     /**
-     * @return ?string
+     * @return string|array|object|null
      */
-    public function getMessage(): ?string
+    public function getMessage(): string|null|array|object
     {
         return $this->message;
     }
