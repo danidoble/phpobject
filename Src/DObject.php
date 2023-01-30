@@ -6,6 +6,7 @@
 namespace Danidoble;
 
 use ArrayAccess;
+use Countable;
 use Danidoble\Interfaces\IDObject;
 
 /**
@@ -13,7 +14,7 @@ use Danidoble\Interfaces\IDObject;
  * @package Danidoble\DObject
  * @author danidoble <Daniel Sandoval>
  */
-class DObject implements ArrayAccess, IDObject
+class DObject implements ArrayAccess, IDObject, Countable
 {
     private array $container = array();
 
